@@ -1,0 +1,108 @@
+-- MySQL dump 10.13  Distrib 8.0.22, for Linux (x86_64)
+--
+-- Host: localhost    Database: project
+-- ------------------------------------------------------
+-- Server version	8.0.22-0ubuntu0.20.04.3
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `menu`
+--
+
+DROP TABLE IF EXISTS `menu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `menu` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `Name` varchar(100) NOT NULL,
+  `Price` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `menu`
+--
+
+LOCK TABLES `menu` WRITE;
+/*!40000 ALTER TABLE `menu` DISABLE KEYS */;
+INSERT INTO `menu` VALUES (1,'quia',25.34),(2,'ut',59722063.36),(3,'rem',53061834.33),(4,'porro',65484217.13),(5,'et',223366.63),(6,'occaecati',1724942.96),(7,'sed',25042453.00),(8,'inventore',25396.14),(9,'unde',2124.60),(10,'suscipit',99999999.99),(11,'velit',28.69),(12,'quidem',508.81),(13,'aut',17.00),(14,'est',67439.68),(15,'fugit',31875.33),(16,'laudantium',2322628.80),(17,'autem',5585.53),(18,'iusto',4.02),(19,'eveniet',195352.12),(20,'voluptate',66501791.79);
+/*!40000 ALTER TABLE `menu` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `raiyan`
+--
+
+DROP TABLE IF EXISTS `raiyan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `raiyan` (
+  `username` varchar(30) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `address` varchar(30) NOT NULL,
+  `phone` varchar(30) NOT NULL,
+  `gender` varchar(30) NOT NULL,
+  `dateofbirth` varchar(30) NOT NULL
+) 
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `raiyan`
+--
+
+LOCK TABLES `raiyan` WRITE;
+/*!40000 ALTER TABLE `raiyan` DISABLE KEYS */;
+INSERT INTO `raiyan` VALUES ('Raiyan',' Mohammed Bhuiya ','raiyan.aiub@gmail.com','asdasd','20 Clent Road  Apt 2R','6315307222','Male','2020-11-18'),('gridou',' Mohammed Bhuiya ','raiyan.aiub@gmail.com','akualbakul','20 Clent Road  Apt 2R','6315307222','Male','2020-11-26'),('mou',' asdasdasad ','asd','asdas','asd','4546','Female','2020-11-25'),('sabina',' sabina ','raiyan.aiub@gmail.com','akulabaku0','20 Clent Road  Apt 2R','63153072221','Female','2020-11-21'),('sad',' saad ','saad@gmail.com','asd22222','asdasd','515151515','Male','2020-10-15'),('mim',' mim ','mimaaa','asqqwe1','asdasd','124587','Female','2020-11-18'),('hadi',' hadi ','hadi@gmail.com','akulabakul','uttara','01682707262','Male','2020-12-22'),('rai21',' rai ','rai@gmail.com','123123','asdasdas','12312312','Female','2020-12-01'),('Nahid','Joy','nahidhasan282@gmail.com','123456','Kajla','01706866662','Male','2021-01-07'),('','Nahid','nahidhasan282@gmail.com','','Kajla','01706866662','','2021-01-07'),('','Nahid','nahidhasan282@gmail.com','','Kajla','01706866662','','2021-01-07'),('','Nahid','nahidhasan282@gmail.com','','Kajla','01706866662','','2021-01-07'),('','Nahid','nahidhasan282@gmail.com','','Kajla','01706866662','','2021-01-07'),('','Nahid','nahidhasan282@gmail.com','','Kajla','01706866662','','2021-01-07'),('','Nahid','nahidhasan282@gmail.com','','Kajla','01706866662','','2021-01-07'),('nazum','Nazum','nazum@gmail.com','1234567p*','dfdf','01706866662','Male','2021-01-20');
+/*!40000 ALTER TABLE `raiyan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `reservations`
+--
+
+DROP TABLE IF EXISTS `reservations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reservations` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `number_of_guest` int NOT NULL,
+  `time` varchar(200) NOT NULL,
+  `note` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reservations`
+--
+
+LOCK TABLES `reservations` WRITE;
+/*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
+INSERT INTO `reservations` VALUES (1,'Nahid Hasan',5,'6:67','4545'),(2,'df',56,'6:67','fgf');
+/*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-01-02 19:28:46
